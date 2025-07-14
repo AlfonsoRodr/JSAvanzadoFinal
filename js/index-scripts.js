@@ -9,9 +9,10 @@ function getNewsList() {
 
 /**
  * Reads from the .json document, and load this data into the html.
+ * @returns {VoidFunction}
  */
 function loadNews() {
-    fetch("news.json")
+    fetch("../news.json")
     .then(response => {
         if (!response.ok) {
             throw new Error("There is an error trying to load de json file");
@@ -25,7 +26,7 @@ function loadNews() {
             const newElement = document.createElement("div");
             newElement.setAttribute("data-id", news.id);
             newElement.setAttribute("onclick", "storeNewsID(this)");
-            newElement.innerHTML = `<h3>${news.title}</h3><p>${news.content}</p>`;
+            newElement.innerHTML = `<h3>${news.title}</h3><p>${news.preview}</p>`;
             newsList.appendChild(newElement);
         }
     })
@@ -39,6 +40,8 @@ function loadNews() {
 /**
  * Stores in localStorage the id of the news that have been clicked.
  * @param {HTMLElement} element - The HTML element that was clicked.
+ * 
+ * @returns {VoidFunction}
  */
 function storeNewsID(element) {
     const selectedId = element.getAttribute("data-id");
