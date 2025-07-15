@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+section {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 5% auto;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+section h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+}
+
+#contact-section, #profit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input, #time-ammount {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus, #time-ammount:focus {
+  outline: none;
+  border: 1px solid #00ddff;
+  box-shadow: 0 0 5px #00ddff;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#button {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #00ddff, #00b8d9);
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 221, 255, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 221, 255, 0.5);
+  background: linear-gradient(135deg, #00b8d9, #00ddff);
+}
+
+#button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(0, 221, 255, 0.3);
+}
+
+#profit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#profit-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.option-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.option-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+}
+
+.option-group input[type="checkbox"], .option-group input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #00ddff;
+  border-radius: 4px;
+}
+
+p {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#total-price-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive  */
+@media (max-width: 768px) {
+  section {
+    padding: 16px;
+    margin: 5% 2%;
+  }
+
+  section h2, #profit-section h2 {
+    font-size: 1.6rem;
+  }
+
+  label, .option-group label {
+    font-size: 1rem;
+  }
+
+  #button {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .option-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .option-group label {
+    justify-content: center;
+  }
+
+  #button {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  section h2, #profit-section h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  #total-price-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+}
