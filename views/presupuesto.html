@@ -36,13 +36,13 @@
             <form id="formulary" method="get">
                 <section id="contact-section">
                     <h2>Información de Contacto</h2>
-                    <label for="name">Nombre:</label>
+                    <label for="name-field">Nombre:</label>
                     <input type="text" name="name" id="name-field" autofocus placeholder="Pedro">
-                    <label for="surname">Apellidos:</label>
+                    <label for="surname-field">Apellidos:</label>
                     <input type="text" name="surname" id="surname-field" placeholder="García Perez">
-                    <label for="telephone">Teléfono:</label>
+                    <label for="telephone-field">Teléfono:</label>
                     <input type="tel" name="telephone" id="telephone-field" placeholder="123456789">
-                    <label for="email">Email:</label>
+                    <label for="email-field">Email:</label>
                     <input type="email" name="email" id="email-field" placeholder="correo@gmail.com">
                 </section>
 
@@ -74,10 +74,10 @@
                         <label><input type="checkbox" name="extra-option" value="team">Añadir Logo de Equipo</label>
                     </div>
 
-                    <label id="total-price-container">
+                    <div id="total-price-container">
                         <h2>Total:</h2>
-                        <h2 id="total-price"></h2>
-                    </label>
+                        <h2 id="total-price"></h2> <!-- Is empty because it will be filled dynamically with JS-->
+                    </div>
 
                     <div class="option-group">
                         <input type="checkbox" name="privacy" id="privacy">

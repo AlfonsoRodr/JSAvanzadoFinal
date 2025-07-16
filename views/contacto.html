@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticia</title>
+    <meta name="author" content="Alfonso Rodríguez">
+    <title>Contacto</title>
     <link rel="stylesheet" href="../css/common-styles.css">
-    <link rel="stylesheet" href="../css/noticia-styles.css">
+    <link rel="stylesheet" href="../css/contacto-styles.css">
     <link rel="shortcut icon" href="../images/Logo.png" type="image/x-icon">
-    <script src="../js/noticia-scripts.js"></script>
+    <script src="../js/common-scripts.js"></script>
+    <script type="text/JavaScript" src="https://maps.googleapis.com/maps/api/js?key=KEY"></script>
+    <script src="../js/contacto-scripts.js"></script>
 </head>
 
 <body>
@@ -24,22 +27,22 @@
                     <li><a href="../index.html" class="option" title="Menu">Home</a></li>
                     <li><a href="presupuesto.html" class="option" title="Presupuesto">Presupuesto</a></li>
                     <li><a href="galeria.html" class="option" title="Galería">Galería</a></li>
-                    <li><a href="./views/contacto.html" class="option" title="Contacto">Contacto</a></li>
+                    <li><a href="contacto.html" class="option" title="Contacto">Contacto</a></li>
                     <li><a href="aviso-legal.html" class="option" title="Aviso Legal">Aviso Legal</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <div id="news-container">
-                <img id="news-image" alt="Imagen de la noticia"> <!-- It does not have the "src" attribute because the image will be taken from the JSON file dynamically with JS-->
-                <h1 id="news-title"></h1> <!-- Is empty because it will be filled dynamically with JS-->
-                <p id="news-content"></p>
-            </div>
-            
-            <div id="button-container">
-                <a class="back-button" id="back-button" href="#" title="Volver al inicio">Anterior Noticia</a>
-                <a id="next-button" class="next-button" href="#" title="Siguiente Noticia">Siguiente Noticia</a>
+            <div id="contact-container">
+                <div id="map"></div>
+
+                <div id="contact-info">
+                    <h1 id="contact-title">Información de Contacto</h1>
+                    <strong>Ubicación: </strong>
+                    <p>1271 Avenue of the Americas New York, NY 10020</p>
+                    <strong>Teléfono: </strong> <span> (646) 977-8777</span>
+                </div>
             </div>
         </main>
 
@@ -62,7 +65,7 @@
                 </div>
 
                 <div class="legal">
-                    <a href="./views/aviso-legal.html" title="Aviso legal">Aviso Legal</a>
+                    <a href="aviso-legal.html" title="Aviso legal">Aviso Legal</a>
                 </div>
             </div>
         </footer>
