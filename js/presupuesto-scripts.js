@@ -62,7 +62,21 @@ function verifyContactForm() {
     const surnameField = document.getElementById("surname-field").value;
     const phoneField = document.getElementById("telephone-field").value;
 
-    return verifyName(nameField) && verifySurname(surnameField) && verifyPhone(phoneField);
+    if (!verifyName(nameField)) {
+        alert("Por favor, introduce un nombre válido (sin números y máximo 15 caracteres).");
+        return false;
+    }
+
+    if (!verifySurname(surnameField)) {
+        alert("Por favor, introduce un apellido válido (sin números y máximo 40 caracteres).");
+        return false;
+    }
+
+    if (!verifyPhone(phoneField)) {
+        alert("Por favor, introduce un número de teléfono válido de 9 dígitos.");
+        return false;
+    }
+    return true;
 }
 
 /**
@@ -149,7 +163,6 @@ function verifyProfitForm() {
     discount = 0;
 
     if (!buyProduct()) {
-        //alert("Debe de comprar al menos un producto");
         return false;
     }
     addExtra();
