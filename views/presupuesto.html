@@ -2,15 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Alfonso Rodríguez">
-    <title>Presupuesto</title>
-    <link rel="stylesheet" href="../css/common-styles.css">
-    <link rel="stylesheet" href="../css/presupuesto-styles.css">
-    <link rel="shortcut icon" href="../images/Logo.png" type="image/x-icon">
-    <script src="../js/common-scripts.js"></script>
-    <script type="module" src="../js/presupuesto-scripts.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alfonso Rodríguez" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/common-styles.css" />
+    <link rel="stylesheet" href="../css/contacto-styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <link rel="shortcut icon" href="../images/Logo.png" type="image/x-icon" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.min.js"></script>
+    <script src="../js/contacto-scripts.js"></script>
 </head>
 
 <body>
@@ -18,7 +21,7 @@
         <header>
             <div id="image-container">
                 <a id="link-container" href="../index.html" title="Home">
-                    <img id="logo" src="../images/Logo.png" alt="Logo" width="3840" height="2160">
+                    <img id="logo" src="../images/Logo.png" alt="Logo" width="3840" height="2160" />
                 </a>
             </div>
             <nav>
@@ -33,78 +36,34 @@
         </header>
 
         <main>
-            <form id="formulary" method="get">
-                <section id="contact-section">
-                    <h2>Información de Contacto</h2>
-                    <label for="name-field">Nombre:</label>
-                    <input type="text" name="name" id="name-field" autofocus placeholder="Pedro">
-                    <label for="surname-field">Apellidos:</label>
-                    <input type="text" name="surname" id="surname-field" placeholder="García Perez">
-                    <label for="telephone-field">Teléfono:</label>
-                    <input type="tel" name="telephone" id="telephone-field" placeholder="123456789">
-                    <label for="email-field">Email:</label>
-                    <input type="email" name="email" id="email-field" placeholder="correo@gmail.com">
-                </section>
+            <div id="contact-container">
+                <div id="map"></div>
 
-                <section id="profit-section">
-                    <h2>Presupuesto</h2>
-
-                    <label>Seleccione los productos que desea adquirir:</label>
-                    <div class="option-group">
-                        <label><input type="checkbox" name="product" value="mitt"> Guante</label>
-                        <label><input type="checkbox" name="product" value="bat"> Bate</label>
-                        <label><input type="checkbox" name="product" value="gloves"> Guantes de Bateo</label>
-                    </div>
-
-                    <label>Indique el Plazo:</label>
-                    <div class="option-group">
-                        <label><input type="radio" name="plazo" value="days" id="days-option"> Días</label>
-                        <label><input type="radio" name="plazo" value="months" id="month-option"> Meses</label>
-                    </div>
-
-                    <p>
-                        Indique la cantidad de plazos:
-                        <input type="number" name="time-ammount" id="time-ammount" min="1" placeholder="Ej: 3">
-                    </p>
-
-                    <label>Seleccione algún extra para su producto:</label>
-                    <div class="option-group">
-                        <label><input type="checkbox" name="extra-option" value="color">Color Personalizado</label>
-                        <label><input type="checkbox" name="extra-option" value="name">Añadir Nombre</label>
-                        <label><input type="checkbox" name="extra-option" value="team">Añadir Logo de Equipo</label>
-                    </div>
-
-                    <div id="total-price-container">
-                        <h2>Total:</h2>
-                        <h2 id="total-price"></h2> <!-- Is empty because it will be filled dynamically with JS-->
-                    </div>
-
-                    <div class="option-group">
-                        <input type="checkbox" name="privacy" id="privacy">
-                        <label for="privacy">Acepto la Política de Privacidad</label>
-                    </div>
-                </section>
-
-                <input id="button" type="submit" value="Confirmar">
-            </form>
+                <div id="contact-info">
+                    <h1 id="contact-title">Información de Contacto</h1>
+                    <strong>Ubicación: </strong>
+                    <p>1271 Avenue of the Americas, New York, NY 10020</p>
+                    <strong>Teléfono: </strong> <span>(646) 977-8777</span>
+                </div>
+            </div>
         </main>
 
         <footer>
             <div class="footer-content">
                 <div class="social-media">
                     <a href="https://www.facebook.com" target="_blank" title="Facebook">
-                        <img src="../images/Facebook.png" alt="Facebook" width="2143" height="2143">
+                        <img src="../images/Facebook.png" alt="Facebook" width="2143" height="2143" />
                     </a>
                     <a href="https://www.twitter.com" target="_blank" title="Twitter">
-                        <img src="../images/Twitter.png" alt="Twitter" width="600" height="600">
+                        <img src="../images/Twitter.png" alt="Twitter" width="600" height="600" />
                     </a>
                     <a href="https://www.instagram.com" target="_blank" title="Instagram">
-                        <img src="../images/Instagram.png" alt="Instagram" width="1200" height="1200">
+                        <img src="../images/Instagram.png" alt="Instagram" width="1200" height="1200" />
                     </a>
                 </div>
 
                 <div class="company-info">
-                    <p>1271 Avenue of the Americas New York, NY 10020</p>
+                    <p>1271 Avenue of the Americas, New York, NY 10020</p>
                 </div>
 
                 <div class="legal">

@@ -9,15 +9,18 @@
 }
 
 #map {
-    position: relative;
-    width: 300px;
-    height: 140px;
+    margin: auto;
+    margin-bottom: 2%;
+    width: 600px;
+    height: 400px;
     border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 #contact-info {
     width: 25%;
     margin: auto;
+    margin-top: 5%;
     font-size: 1em;
     color: white;
     background-color: rgba(0, 0, 0, 0.75);
