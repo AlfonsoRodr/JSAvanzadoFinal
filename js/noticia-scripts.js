@@ -26,7 +26,7 @@ function showNews() {
         displayErrorMessage();
     }
     else {
-        fetch("../news.json")
+        fetch("../data/news.json")
         .then(response => {
             if (!response.ok) {
                 throw new Error("There is an error trying to load de json file");
@@ -63,7 +63,7 @@ function previousNew() {
         displayErrorMessage();
     }
     else {
-        fetch("../news.json")
+        fetch("../data/news.json")
         .then(response => {
             if (!response.ok) {
                 throw new Error("There is an error trying to load de json file");
@@ -92,7 +92,7 @@ function nextNews() {
         displayErrorMessage();
     }
     else {
-        fetch("../news.json")
+        fetch("../data/news.json")
         .then(response => {
             if (!response.ok) {
                 throw new Error("There is an error trying to load de json file");

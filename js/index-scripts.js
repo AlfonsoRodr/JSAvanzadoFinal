@@ -11,7 +11,7 @@ function getNewsList() {
  * @returns {void}
  */
 function loadNews() {
-    fetch("../news.json")
+    fetch("../data/news.json")
     .then(response => {
         if (!response.ok) {
             throw new Error("There is an error trying to load de json file");
