@@ -1,6 +1,6 @@
 /**
  * Displays a message in the html informing of the ocurred error.
- * @returns {VoidFunction}
+ * @returns {void}
  */
 function displayErrorMessage() {
     document.body.innerHTML = "<h2>No se encontró la noticia </h2>";
@@ -17,7 +17,7 @@ function getStoredId() {
 
 /**
  * Obtain the id of the new previously stored, and show its respective data in the html.
- * @returns {VoidFunction}
+ * @returns {void}
  */
 function showNews() {
     const storedId = getStoredId();
@@ -55,7 +55,7 @@ function showNews() {
 
 /**
  * Loads the previous news item based on the selected news ID stored in localStorage.
- * @returns {VoidFunction}
+ * @returns {void}
  */
 function previousNew() {
     const storedId = getStoredId();
@@ -84,7 +84,7 @@ function previousNew() {
 
 /**
  * Loads the next news item based on the selected news ID stored in localStorage.
- * @returns {VoidFunction}
+ * @returns {void}
  */
 function nextNews() {
     const storedId = getStoredId();
@@ -124,7 +124,7 @@ function nextNews() {
  * @param {Array<Object>} jsonContent - Array of news objects.
  * @param {number} currentIndex - The index of the currently selected news item.
  * 
- * @returns {VoidFunction}
+ * @returns {void}
  */
 function verifyPreviousButtonAction(jsonContent, currentIndex) {
     const previuosNew = jsonContent[currentIndex - 1];
@@ -153,6 +153,8 @@ function verifyPreviousButtonAction(jsonContent, currentIndex) {
  *
  * @param {Array<Object>} jsonContent - Array of news items.
  * @param {number} currentIndex - The index of the currently selected news item.
+ * 
+ * @returns {void}
  */
 function verifyNextButtonVisibility(jsonContent, currentIndex) {
     const followingNew = jsonContent[currentIndex + 1];

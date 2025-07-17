@@ -75,6 +75,7 @@ section h2 {
   font-size: 140%;
 }
 
+/* -------------------- Responsive ---------------------------- */
 /* ----------- Phones (max 768px) ----------- */
 @media (max-width: 768px) {
   #lists-container {

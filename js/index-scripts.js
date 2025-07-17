@@ -1,4 +1,3 @@
-
 /**
  * Obtains the list of news.
  * @returns {HTMLElement|null} the list of news.
@@ -9,7 +8,7 @@ function getNewsList() {
 
 /**
  * Reads from the .json document, and load this data into the html.
- * @returns {VoidFunction}
+ * @returns {void}
  */
 function loadNews() {
     fetch("../news.json")
@@ -41,7 +40,7 @@ function loadNews() {
  * Stores in localStorage the id of the news that have been clicked.
  * @param {HTMLElement} element - The HTML element that was clicked.
  * 
- * @returns {VoidFunction}
+ * @returns {void}
  */
 function storeNewsID(element) {
     const selectedId = element.getAttribute("data-id");

@@ -141,7 +141,7 @@ p {
   justify-content: center;
 }
 
-/* Responsive  */
+/* -------------------- Responsive ---------------------------- */
 @media (max-width: 768px) {
   section {
     padding: 16px;
