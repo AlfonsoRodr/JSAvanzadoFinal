@@ -33,7 +33,7 @@
         </header>
 
         <main>
-            <form id="formulary" method="get">
+            <form action="confirmacion.html" id="formulary" method="get">
                 <section id="contact-section">
                     <h2>Información de Contacto</h2>
                     <label for="name-field">Nombre:</label>
@@ -62,22 +62,27 @@
                         <label><input type="radio" name="plazo" value="months" id="month-option"> Meses</label>
                     </div>
 
-                    <p>
+                    <label for="time-amount">
                         Indique la cantidad de plazos:
-                        <input type="number" name="time-ammount" id="time-ammount" min="1" placeholder="Ej: 3">
-                    </p>
+                        <input type="number" name="time-ammount" id="time-amount" min="1" placeholder="Ej: 3">
+                    </label>
 
                     <label>Seleccione algún extra para su producto:</label>
                     <div class="option-group">
-                        <label><input type="checkbox" name="extra-option" value="color">Color Personalizado</label>
-                        <label><input type="checkbox" name="extra-option" value="name">Añadir Nombre</label>
-                        <label><input type="checkbox" name="extra-option" value="team">Añadir Logo de Equipo</label>
+                        <label for="extra-color">
+                            <input type="checkbox" name="extra-option" value="color" id="extra-color">Color Personalizado
+                        </label>
+                        <label for="extra-name">
+                            <input type="checkbox" name="extra-option" value="name" id="extra-name">Añadir Nombre
+                        </label>
+                        <label for="extra-team">
+                            <input type="checkbox" name="extra-option" value="team" id="extra-team">Añadir Logo de Equipo
+                        </label>
                     </div>
 
-                    <div id="total-price-container">
-                        <h2>Total:</h2>
-                        <h2 id="total-price">0.00€</h2>
-                    </div>
+                    <h2>
+                        Total: <span id="total-price">0.00€</span>
+                    </h2>
 
                     <div class="option-group">
                         <input type="checkbox" name="privacy" id="privacy">

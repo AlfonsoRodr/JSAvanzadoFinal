@@ -108,7 +108,7 @@ function buyProduct() {
  */
 function applyDiscount() {
     const selectedOption = document.querySelector('input[name="plazo"]:checked');
-    const ammountTime = parseInt(document.getElementById("time-ammount").value);
+    const ammountTime = parseInt(document.getElementById("time-amount").value);
     
     if ((!selectedOption) || isNaN(ammountTime) || (ammountTime <= 0)) {
         return false;
@@ -162,17 +162,16 @@ function verifyProfitForm() {
     totalPrice = 0;
     discount = 0;
 
-    if (!buyProduct()) {
-        return false;
+    if (buyProduct()) {
+        addExtra();
+        applyDiscount();
     }
-    addExtra();
-    applyDiscount();
 
     const element = document.getElementById("total-price");
     if (element) {
         element.innerText = totalPrice.toFixed(2) + " €";
     }
-    return verifyConditions();
+    return buyProduct() && verifyConditions();
 }
 
 /**
@@ -189,7 +188,7 @@ function verifyForm() {
 
 document.addEventListener("DOMContentLoaded", () => {
     const inputs = document.querySelectorAll(
-        'input[name="product"], input[name="extra-option"], input[name="plazo"], #time-ammount'
+        'input[name="product"], input[name="extra-option"], input[name="plazo"], #time-amount'
     );
     inputs.forEach(input => {
         input.addEventListener("change", verifyProfitForm);

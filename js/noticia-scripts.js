@@ -174,5 +174,4 @@ function verifyNextButtonVisibility(jsonContent, currentIndex) {
         nextButton.onclick = null;
     }
 }
-
 window.addEventListener("DOMContentLoaded", showNews);

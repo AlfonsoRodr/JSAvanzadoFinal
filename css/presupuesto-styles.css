@@ -33,7 +33,7 @@ input {
   box-sizing: border-box;
 }
 
-#time-ammount {
+#time-amount {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -43,7 +43,7 @@ input {
   box-sizing: border-box;
 }
 
-input:focus, #time-ammount:focus {
+input:focus, #time-amount:focus {
   outline: none;
   border: 1px solid #00ddff;
   box-shadow: 0 0 5px #00ddff;

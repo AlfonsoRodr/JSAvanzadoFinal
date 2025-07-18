@@ -19,5 +19,4 @@ function changePage() {
         }
     }
 }
-
 window.addEventListener("DOMContentLoaded", changePage);
