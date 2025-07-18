@@ -1,22 +1,41 @@
 /**
- * Adds the class "current-page" to the html in which the user is currently in. 
- * This way, the user will know in which page he is.
- * 
+ * Highlights the current navigation link by adding the "current-page" class.
+ * Treats both "/index.html" and "/" as equivalent paths.
+ *
  * @returns {void}
  */
 function changePage() {
-    const currentPath = window.location.pathname;;
-    const navLinks = document.getElementsByClassName("option");
+  const currentPath = normalizePath(window.location.pathname);
 
-    for (let link of navLinks) {
-        const linkPath = new URL(link.href).pathname;
+  const navLinks = document.getElementsByClassName("option");
 
-        if (linkPath === currentPath) {
-            link.classList.add("current-page");
-        }
-        else {
-            link.classList.remove("current-page");
-        }
+  for (let link of navLinks) {
+    const linkPath = normalizePath(new URL(link.href).pathname);
+
+    if (currentPath === linkPath) {
+      link.classList.add("current-page");
+    } else {
+      link.classList.remove("current-page");
     }
+  }
 }
+
+/**
+ * Normalizes paths:
+ * - Removes trailing slashes
+ * - Converts "/index.html" to "/"
+ * - Makes lowercase for consistency
+ *
+ * @param {string} path
+ * @returns {string}
+ */
+function normalizePath(path) {
+  path = path.toLowerCase().replace(/\/+$/, "");
+
+  if (path.endsWith("/index.html")) {
+    path = path.replace(/\/index\.html$/, "");
+  }
+  return path;
+}
+
 window.addEventListener("DOMContentLoaded", changePage);
