@@ -45,10 +45,8 @@ function loadNews() {
 function storeNewsID(element) {
     const selectedId = element.getAttribute("data-id");
     localStorage.setItem("selectedNewsId", selectedId);
-    const urlRaw = "../views/noticia.html";
-    const urlClean = urlRaw.replace(/[\x00-\x1F\x7F]/g, "");
-    window.open(urlClean, "_blank");
-
+    const url = "/WebSiteMLB/views/noticia.html";
+    window.open(url, "_blank");
 }
 
 window.addEventListener("DOMContentLoaded", loadNews);
